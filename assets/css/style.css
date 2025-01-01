@@ -2,53 +2,57 @@ body{
     background-color: #E0FFFF;
 }
 
-.menuI{
-    font-size: 2rem;
-    color: #DC143C;
-    position: absolute;
-    right: 3rem;
-    top: 3rem;
-    cursor: pointer;
-    transition: all .5s linear;
-}
-
-
-
-.sideNavBar{
-    width: 20.2rem;
-    height: 100vh;
-    background-color: #FAF0E6;
+.sideBar{
+    width: 22rem;
+    min-height: 100vh;
+    background-color: rgb(255, 226, 226);
     position: fixed;
-    top: 0;
     left: 0;
+    top:0;
     z-index: 2;
 }
+.menuI{
+    font-size: 2rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    color: #ff4502;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+}
+
+
 
 .closeI{
     font-size: 3rem;
-    color: #DC143C;
     position: absolute;
-    right: 3rem;
+    color: #ff4502;
     top: 2rem;
+    right: 3rem;
+    transition: all .4s ease-in-out;
     cursor: pointer;
-    transition: all .5s linear;
 }
-
-.menuI:is(:hover, :focus, :active),
-.closeI:is(:hover, :focus, :active){
-    color: navy;
-    transform: scale(.8) rotate(360deg);
+.menuI:is(:hover, :active, :focus),
+.closeI:is(:hover, :active, :focus){
+    transform: rotate(360deg) scale(.8);
+    color: rgb(81, 0, 142);
 }
 
 .backdrop{
-    height: 100vh;
-    background-color: rgb(0, 0, 0, .6);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     cursor: pointer;
+    z-index: 1;
 }
 
 
 
+
+/* ------------------------------------------------------- */
 
 
 .tabHeading{
