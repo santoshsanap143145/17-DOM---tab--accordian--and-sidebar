@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - DOM events - Accordian (collapsing panel)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div>
+      <i class="fa-solid fa-bars menuI" id="menuI"></i>
+    </div>
+
+    <aside class="sideNavBar d-none" id="sideBar">
+      <i class="fa-solid fa-xmark closeI" id="closeI"></i>
+    </aside>
+    <div class="backdrop d-none" id="backdrop"></div>
+
+    <section class="section">
+      <div class="container mt-5 max-auto p-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <ul class="tabHeading">
+              <li class="active" data-id="html">HTML</li>
+              <li data-id="css">CSS</li>
+              <li data-id="js">JS</li>
+              <li data-id="angular">ANGULAR</li>
+            </ul>
+            <div class="card tabPanel active" id="html">
+              <div class="card-body">
+                <strong>HTML</strong>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                placeat necessitatibus recusandae optio dolorum quia quidem
+                magni repudiandae dolorem tempore, doloremque impedit aliquid
+                laudantium veritatis odit? Nisi maiores dolores corrupti?
+              </div>
+            </div>
+            <div class="card tabPanel" id="css">
+              <div class="card-body">
+                <strong>CSS</strong>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                placeat necessitatibus recusandae optio dolorum quia quidem
+                magni repudiandae dolorem tempore, doloremque impedit aliquid
+                laudantium veritatis odit? Nisi maiores dolores corrupti?
+              </div>
+            </div>
+            <div class="card tabPanel" id="js">
+              <div class="card-body">
+                <strong>JS</strong>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                placeat necessitatibus recusandae optio dolorum quia quidem
+                magni repudiandae dolorem tempore, doloremque impedit aliquid
+                laudantium veritatis odit? Nisi maiores dolores corrupti?
+              </div>
+            </div>
+            <div class="card tabPanel" id="angular">
+              <div class="card-body">
+                <strong>ANGULAR</strong>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+                placeat necessitatibus recusandae optio dolorum quia quidem
+                magni repudiandae dolorem tempore, doloremque impedit aliquid
+                laudantium veritatis odit? Nisi maiores dolores corrupti?
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5 max-auto p-5">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <div class="accoPanel">
+              <h3 class="accoHeading active">
+                <strong>HTML</strong>
+                <i class="fa-solid fa-caret-down"></i>
+              </h3>
+              <p class="accoContent">
+                <strong>HTML</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                ipsum minus veritatis nam facilis et dolorum dolores asperiores,
+                iusto vitae, eveniet consequuntur omnis fugit, consectetur
+                laborum quos reprehenderit soluta ducimus. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quaerat ipsum minus veritatis
+                nam facilis et dolorum dolores asperiores, iusto vitae, eveniet
+                consequuntur omnis fugit, consectetur laborum quos reprehenderit
+                soluta ducimus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quaerat ipsum minus veritatis nam facilis et
+                dolorum dolores asperiores, iusto vitae, eveniet consequuntur
+                omnis fugit, consectetur laborum quos reprehenderit soluta
+                ducimus.
+              </p>
+            </div>
+            <div class="accoPanel">
+              <h3 class="accoHeading">
+                <strong>CSS</strong>
+                <i class="fa-solid fa-caret-down"></i>
+              </h3>
+              <p class="accoContent">
+                <strong>CSS</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                ipsum minus veritatis nam facilis et dolorum dolores asperiores,
+                iusto vitae, eveniet consequuntur omnis fugit, consectetur
+                laborum quos reprehenderit soluta ducimus. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quaerat ipsum minus veritatis
+                nam facilis et dolorum dolores asperiores, iusto vitae, eveniet
+                consequuntur omnis fugit, consectetur laborum quos reprehenderit
+                soluta ducimus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quaerat ipsum minus veritatis nam facilis et
+                dolorum dolores asperiores, iusto vitae, eveniet consequuntur
+                omnis fugit, consectetur laborum quos reprehenderit soluta
+                ducimus.
+              </p>
+            </div>
+            <div class="accoPanel">
+              <h3 class="accoHeading">
+                <strong>JS</strong>
+                <i class="fa-solid fa-caret-down"></i>
+              </h3>
+              <p class="accoContent">
+                <strong>JS</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                ipsum minus veritatis nam facilis et dolorum dolores asperiores,
+                iusto vitae, eveniet consequuntur omnis fugit, consectetur
+                laborum quos reprehenderit soluta ducimus. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quaerat ipsum minus veritatis
+                nam facilis et dolorum dolores asperiores, iusto vitae, eveniet
+                consequuntur omnis fugit, consectetur laborum quos reprehenderit
+                soluta ducimus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quaerat ipsum minus veritatis nam facilis et
+                dolorum dolores asperiores, iusto vitae, eveniet consequuntur
+                omnis fugit, consectetur laborum quos reprehenderit soluta
+                ducimus.
+              </p>
+            </div>
+            <div class="accoPanel">
+              <h3 class="accoHeading">
+                <strong>ANGULAR</strong>
+                <i class="fa-solid fa-caret-down"></i>
+              </h3>
+              <p class="accoContent">
+                <strong>ANGULAR</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                ipsum minus veritatis nam facilis et dolorum dolores asperiores,
+                iusto vitae, eveniet consequuntur omnis fugit, consectetur
+                laborum quos reprehenderit soluta ducimus. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Quaerat ipsum minus veritatis
+                nam facilis et dolorum dolores asperiores, iusto vitae, eveniet
+                consequuntur omnis fugit, consectetur laborum quos reprehenderit
+                soluta ducimus. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Quaerat ipsum minus veritatis nam facilis et
+                dolorum dolores asperiores, iusto vitae, eveniet consequuntur
+                omnis fugit, consectetur laborum quos reprehenderit soluta
+                ducimus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+body{
+    background-color: #E0FFFF;
+}
+
+.menuI{
+    font-size: 2rem;
+    color: #DC143C;
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+
+
+.sideNavBar{
+    width: 20.2rem;
+    height: 100vh;
+    background-color: #FAF0E6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.closeI{
+    font-size: 3rem;
+    color: #DC143C;
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+
+.menuI:is(:hover, :focus, :active),
+.closeI:is(:hover, :focus, :active){
+    color: navy;
+    transform: scale(.8) rotate(360deg);
+}
+
+.backdrop{
+    height: 100vh;
+    background-color: rgb(0, 0, 0, .6);
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+
+
+.tabHeading{
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: .5rem;
+}
+
+.tabHeading li{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    width: 25%;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: all .4s ease-in-out;
+}
+
+.tabHeading li:is(:hover, :focus, :active),
+.tabHeading li.active{
+    background-color: #ffa500;
+    color: #ffffff;
+
+}
+
+.tabPanel{
+    display: none;
+}
+
+.tabPanel.active{
+    display: block;
+}
+
+
+
+
+
+
+.accoHeading{
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.accoHeading:is(:hover, :active, :focus),
+.accoHeading.active{
+    background-color: #ffa500;
+    color:#fff;
+}
+
+.accoContent{
+    display: none;
+    border: 2px solid rgb(172, 171, 169);
+    background-color: rgb(254, 211, 211);
+    margin: 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: 500;
+}
+
+.accoHeading.active + .accoContent{
+    display: block;
+}
